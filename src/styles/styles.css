@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: "Roboto Slab", serif;
+    background-image: url(../img/background.png);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    color: white;
+}
+*:focus {
+    box-shadow: none !important;
+}
+.container {
+    padding: 61px 0px;
+}
+.coming-soon {
+    margin-top: 58px;
+}
+.coming-soon h5 {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 84px;
+    text-transform: uppercase;
+}
+.countdown-wrapper {
+    margin-top: 70px;
+}
+.countdown {
+    /* margin: 0px 30px; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 30px;
+}
+.tags {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 0px;
+    text-transform: uppercase;
+}
+.vision_apporach_wrapper {
+    margin-top: 75px;
+}
+.vision_apporach h5 {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+}
+.vision_apporach p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(235, 235, 235);
+}
+.get_notified input {
+    border-radius: 30px 0px 0px 30px;
+    padding-left: 20px;
+}
+.input-group-text {
+    color: white;
+    border-radius: 0px 30px 30px 0px;
+    background: #d32240;
+}
+.get-notified p {
+    font-size: 20px;
+    line-height: 26px;
+}
