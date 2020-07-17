@@ -287,7 +287,7 @@
         <!-- coming soon  -->
         <div class="col-12 text-center coming-soon">
           <h5 class="animated-text">
-          <a href="" class="typewrite" data-period="2000" data-type='[ "Comming soon.", "subscribe to get notified.", "your best security app.", "you can never be too careful....." ]'>
+          <a href="" class="typewrite" data-period="2000" data-type='[ "Coming soon.", "subscribe to get notified.", "your best security app.", "you can never be too careful....." ]'>
               <span class="wrap"></span>
             </a>
           </h5>
