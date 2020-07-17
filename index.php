@@ -69,7 +69,7 @@
               attack or data loss for individual and organizations.
             </p>
             <div class="row subscribe-section" >
-              <div class="col-12 col-md-9" data-aos="fade-right">
+              <div class="col-12 col-md-9 animation-delay" data-aos="fade-right">
                 <form action="submit.php" method="POST">
                   <div class="input-group">
                     <input
@@ -112,9 +112,7 @@
             </div>
           </div>
 
-          <div
-            class="col-12 text-center col-md-3 col-lg-3 offset-lg-1 offset-xl-2 text-md-right"
-          >
+          <div class="col-12 text-center col-md-3 col-lg-3 offset-lg-1 offset-xl-2 text-md-right animation-delay"  data-aos="fade-right">
             <img src="src/img/phone-1.png" class="img-fluid phone-img popup" alt="" />
           </div>
         </div>
@@ -124,14 +122,14 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-md-5 col-lg-5 col-xl-4">
+        <div class="col-12 col-md-5 col-lg-5 col-xl-4 " >
           <div class="iphone-1">
-            <img src="src/img/iphone3.png" class="popup" alt="" />
+            <img src="src/img/iphone3.png" class="popup animation-delay" alt="" />
           </div>
           <div class="iphone-2">
             <img src="src/img/iphone-2.png" class="popup" alt="" />
           </div>
-          <div class="iphone-3">
+          <div class="iphone-3" >
             <img src="src/img/iphone-1.png" class="popup" alt="" />
           </div>
         </div>

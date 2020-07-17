@@ -17,8 +17,11 @@ body {
 body {
   font-family: "Poppins", sans-serif !important;
 }
+.popup{
+  cursor: zoom-in;
+}
 .animation-delay {
-  transition-delay: 4s;
+  transition-delay: 3.5s;
 }
 .loader {
   position: absolute;
