@@ -42,10 +42,10 @@
       </div>
   </div>
 
-    <!-- <div id="particles-js"></div> -->
 
     <div class="containers">
 
+    <!-- <div id="particles-js"></div> -->
 
       <div class="container-fluid header">
       <div class="container pt-5">
@@ -62,15 +62,15 @@
         <!-- vision -->
         <div class="row">
           <div class="col-12 col-md-7 col-lg-7 col-xl-6 vision">
-            <h5 class="vision-title">Our Vision</h5>
-            <p class="vision-text">
+            <h5 class="vision-title animation-delay" data-aos="fade-right">Our Vision</h5>
+            <p class="vision-text animation-delay" data-aos="fade-up">
               To develop a cyber security program that supports all areas of
               ACME's business and efficiently mitigates all attempts at cyber
               attack or data loss for individual and organizations.
             </p>
-            <div class="row subscribe-section">
-              <div class="col-12 col-md-9">
-                <form action="">
+            <div class="row subscribe-section" >
+              <div class="col-12 col-md-9" data-aos="fade-right">
+                <form action="submit.php" method="POST">
                   <div class="input-group">
                     <input
                       type="email"
@@ -83,10 +83,11 @@
                     />
                     <div class="input-group-append">
                       <button
-                        class="btn subscribe-btn"
+                        class="btn subscribe-btn animation-delay"
                         type="submit"
                         name="submit"
                         id="basic-addon2"
+                        
                       >
                         Notify Me
                       </button>
@@ -212,7 +213,7 @@
             <p>Get Notified</p>
             <div class="row justify-content-center subscribe-section">
               <div class="col-11 col-md-7 col-lg-5">
-                <form action="">
+              <form action="submit.php" method="POST">
                   <div class="input-group">
                     <input
                       type="email"

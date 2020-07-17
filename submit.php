@@ -10,6 +10,9 @@
 
   // Connect to the sql database
   $db = mysqli_connect($db_host, $db_user, $db_password, $db_name);
+  if($db) {
+    die('fghdjk');
+  }
 
 
 
