@@ -20,9 +20,6 @@ body {
 .popup{
   cursor: zoom-in;
 }
-.animation-delay {
-  transition-delay: 3.5s;
-}
 .loader {
   position: absolute;
   background-color: #333;
@@ -304,11 +301,16 @@ footer {
 .coming-soon {
   margin-bottom: 50px;
 }
-.coming-soon h5 {
+.coming-soon .animated-text .typewrite {
   font-weight: normal;
   font-size: 64px;
   line-height: 84px;
+  color:white;
   text-transform: uppercase;
+}
+.coming-soon .animated-text .typewrite:hover{
+  text-decoration:none;
+  cursor:auto;
 }
 .countdown-wrapper {
   margin-bottom: 80px;
@@ -441,11 +443,12 @@ footer {
     font-size: 20px;
     line-height: 30px;
   }
-  .coming-soon h5 {
+  .coming-soon .animated-text .typewrite {
     font-size: 34px;
-    line-height: 20px;
+    line-height: 40px;
   }
   .coming-soon {
     margin-bottom: 10px;
   }
+  
 }

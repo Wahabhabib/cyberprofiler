@@ -62,14 +62,14 @@
         <!-- vision -->
         <div class="row">
           <div class="col-12 col-md-7 col-lg-7 col-xl-6 vision">
-            <h5 class="vision-title animation-delay" data-aos="fade-right">Our Vision</h5>
-            <p class="vision-text animation-delay" data-aos="fade-up">
+            <h5 class="vision-title">Our Vision</h5>
+            <p class="vision-text">
               To develop a cyber security program that supports all areas of
               ACME's business and efficiently mitigates all attempts at cyber
               attack or data loss for individual and organizations.
             </p>
             <div class="row subscribe-section" >
-              <div class="col-12 col-md-9 animation-delay" data-aos="fade-right">
+              <div class="col-12 col-md-9">
                 <form action="submit.php" method="POST">
                   <div class="input-group">
                     <input
@@ -112,7 +112,7 @@
             </div>
           </div>
 
-          <div class="col-12 text-center col-md-3 col-lg-3 offset-lg-1 offset-xl-2 text-md-right animation-delay"  data-aos="fade-right">
+          <div class="col-12 text-center col-md-3 col-lg-3 offset-lg-1 offset-xl-2 text-md-right">
             <img src="src/img/phone-1.png" class="img-fluid phone-img popup" alt="" />
           </div>
         </div>
@@ -124,7 +124,7 @@
       <div class="row">
         <div class="col-12 col-md-5 col-lg-5 col-xl-4 " >
           <div class="iphone-1">
-            <img src="src/img/iphone3.png" class="popup animation-delay" alt="" />
+            <img src="src/img/iphone3.png" class="popup" alt="" />
           </div>
           <div class="iphone-2">
             <img src="src/img/iphone-2.png" class="popup" alt="" />
@@ -286,7 +286,11 @@
       <div class="row">
         <!-- coming soon  -->
         <div class="col-12 text-center coming-soon">
-          <h5 class="">coming soon</h5>
+          <h5 class="animated-text">
+          <a href="" class="typewrite" data-period="2000" data-type='[ "Comming soon.", "subscribe to get notified.", "your best security app.", "you can never be too careful....." ]'>
+              <span class="wrap"></span>
+            </a>
+          </h5>
           
         </div>
         <!-- coming soon ends -->
@@ -393,16 +397,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
     <script>
-      particlesJS.load("particles-js", "src/js/particles.json", function () {
-        console.log("callback - particles.js config loaded");
-      });
-
-      AOS.init({
-        once: true,
-        easing: "ease-in-out",
-        offset: 160,
-        duration: 1000
-      });
 
       $(".popup").click(function () {
         let src = $(this).attr("src");
@@ -410,6 +404,62 @@
         $("#popup-img").attr("src", src);
       });
 
+        let TxtType = function(el, toRotate, period) {
+          this.toRotate = toRotate;
+          this.el = el;
+          this.loopNum = 0;
+          this.period = parseInt(period, 10) || 2000;
+          this.txt = '';
+          this.tick();
+          this.isDeleting = false;
+      };
+
+      TxtType.prototype.tick = function() {
+          var i = this.loopNum % this.toRotate.length;
+          var fullTxt = this.toRotate[i];
+
+          if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+          } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+          }
+
+          this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+          let that = this;
+          let delta = 200 - Math.random() * 100;
+
+          if (this.isDeleting) { delta /= 2; }
+
+          if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+          } else if (this.isDeleting && this.txt === '') {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+          }
+
+          setTimeout(function() {
+          that.tick();
+          }, delta);
+      };
+
+      window.onload = function() {
+          var elements = document.getElementsByClassName('typewrite');
+          for (var i=0; i<elements.length; i++) {
+              var toRotate = elements[i].getAttribute('data-type');
+              var period = elements[i].getAttribute('data-period');
+              if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+              }
+          }
+          // INJECT CSS
+          var css = document.createElement("style");
+          css.type = "text/css";
+          css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+          document.body.appendChild(css);
+      };
  
     </script>
   </body>
